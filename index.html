@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Conferencing</title>
+    <style>
+        body 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #FFB6C1, #87CEFA); /* Gradient from Light Coral to Light Sky Blue */
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #container 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #20B2AA, #FF7F50); /* Gradient from Light Sea Green to Coral */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        video 
+        {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #FF1493; /* Deep Pink */
+        }
+        #chatContainer 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        #chatMessages 
+        {
+            overflow-y: auto;
+            max-height: 150px;
+            width: 250px;
+            padding: 5px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        #chatInput 
+        {
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+        }
+        button 
+        {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #FF1493, #FF69B4); /* Gradient from Deep Pink to Hot Pink */
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        button:hover 
+        {
+            background: linear-gradient(135deg, #FF69B4, #FF1493); /* Gradient from Hot Pink to Deep Pink */
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color: #fff;">Video Conferencing Website</h1>
+
+        <div id="localVideoContainer">
+            <video id="localVideo" autoplay muted></video>
+            <div class="participantName">You</div>
+        </div>
+
+        <div id="remoteVideoContainer">
+            <!-- Remote video will be displayed here -->
+            <!-- <video id="remoteVideo" autoplay></video> -->
+            <!-- <div class="participantName">Participant 1</div> -->
+            <!-- Add more div elements with unique IDs for additional participants -->
+        </div>
+
+        <div id="chatContainer">
+            <div id="chatMessages"></div>
+            <input type="text" id="chatInput" placeholder="Type your message">
+        </div>
+
+        <button id="startCallButton">Start Call</button>
+        <button id="endCallButton">End Call</button>
+        <button id="toggleAudioButton">Toggle Audio</button>
+        <button id="toggleVideoButton">Toggle Video</button>
+        <button id="shareScreenButton">Share Screen</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
